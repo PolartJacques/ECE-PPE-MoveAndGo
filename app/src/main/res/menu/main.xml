@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_search_devices"
+        android:icon="@drawable/ic_baseline_bluetooth_searching_24"
+        app:showAsAction="always"
+        android:title="@string/str_menu_search_devices"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/menu_enable_bluetooth"
+        android:icon="@drawable/ic_baseline_bluetooth_24"
+        app:showAsAction="always"
+        android:title="@string/str_menu_bluetooth_on"/>
+    <!--<item
+        android:id="@+id/menu_action_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/action_settings"
+        app:showAsAction="always" />-->
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="@string/menu_home"
+        app:showAsAction="always" />
+</menu>
