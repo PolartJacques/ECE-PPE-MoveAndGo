@@ -20,6 +20,11 @@
         android:id="@+id/nav_controller_buttons"
         android:name="com.example.MoveAndGo.ui.controller_buttons.ControllerButtonsFragment"
         android:label="@string/menu_controller"
-        tools:layout="@layout/fragment_controller_buttons"/>
+        tools:layout="@layout/fragment_controller_buttons">
+        <argument
+            android:name="numberOfButton"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
 
 </navigation>

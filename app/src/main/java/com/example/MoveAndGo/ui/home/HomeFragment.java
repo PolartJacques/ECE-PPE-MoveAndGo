@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.MoveAndGo.MainActivity;
@@ -32,12 +34,17 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        EditText fieldNumber = view.findViewById((R.id.fieldNumber));
+
         /*
         Navigates to the following page when the "Enter" button is clicked.
         The navigation can be seen in the app/res/navigation/mobile_navigation.xml.
          */
-        view.findViewById(R.id.enter_button).setOnClickListener(view1 -> NavHostFragment.findNavController(HomeFragment.this)
-                .navigate(R.id.action_nav_home_to_nav_controller));
+        view.findViewById(R.id.enter_button).setOnClickListener(view1 -> {
+            Bundle bundle = new Bundle();
+            bundle.putInt("amount", Integer.parseInt(fieldNumber.getText().toString()));
+            NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.action_nav_home_to_nav_controller, bundle);
+        });
 
         /*
         Gets the bluetooth adapter of the MainActivity

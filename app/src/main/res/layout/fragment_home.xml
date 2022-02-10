@@ -8,15 +8,35 @@
     android:background="@color/white"
     tools:context=".ui.home.HomeFragment">
 
-    <Button
-        android:id="@+id/enter_button"
-        android:layout_width="125dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/blue"
-        android:text="@string/home_enter_button"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="how many input do youy want ?" />
+
+        <EditText
+            android:id="@+id/fieldNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/enter_button"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/home_enter_button"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
