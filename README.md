@@ -5,6 +5,7 @@
 - [but de l'application](#goal)
 - [téléchargement et installation](#download)
 - [utiliser l'application](#use)
+- [notes pour les développeurs](#developer)
 
 ## <a name="goal"></a>  but de l'application
 
@@ -41,6 +42,14 @@ Ce projet s'inscrit dans la thématique de l'aide aux personnes handicapés. Il 
 * Enfin saisissez le nombre de bouton dont vous avez besoin. vous pourrez ensuite controller la valeur a envoyer pour chaque boutons.
 
 <img width="180" height="330" src="/.github/buttons.jpg">
+
+## <a name="developer"></a> notes pour les développeurs
+
+Cette application est basé sur l'application du projet [arm bot](https://github.com/ArmBot-ECE/ArmBot_Java_Android_Studio).
+
+L'interface contenant les boutons est généré par le fichier [controller_buttons](https://github.com/PolartJacques/ECE-PPE-MoveAndGo/blob/master/app/src/main/java/com/example/MoveAndGo/ui/controller_buttons/ControllerButtonsFragment.java). Ce fichier est appelé par le fichier [HomeFragment.java](https://github.com/PolartJacques/ECE-PPE-MoveAndGo/blob/master/app/src/main/java/com/example/MoveAndGo/ui/home/HomeFragment.java) qui envois en paramètre le nombre de boutons à générer.
+
+La valeur transmise par bluetooth est de trype string par défaut.
 
 # Auteur
 
